@@ -1,3 +1,4 @@
+//Brute force
 // function containsDuplicate(nums) {
 //   nums.sort((a, b) => a - b);
 //   for (let i = 1; i < nums.length; i++) {
