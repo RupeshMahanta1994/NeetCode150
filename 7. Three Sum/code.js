@@ -16,6 +16,7 @@ function threeSum(nums) {
   let res = [];
   nums.sort((a, b) => a - b);
   for (let i = 0; i < nums.length; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
     let left = i + 1,
       right = nums.length - 1;
     while (left < right) {
@@ -29,7 +30,7 @@ function threeSum(nums) {
         left++;
         right--;
         while (left < right && nums[left] === nums[left - 1]) {
-          l++;
+          left++;
         }
       }
     }
