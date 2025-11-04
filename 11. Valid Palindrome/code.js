@@ -1,3 +1,10 @@
+//Brute force
+function validPalindrome(s) {
+  const cleaned = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  const reversed = cleaned.split("").reverse().join("");
+  return reversed === cleaned;
+}
+//Optimised
 function validCharacter(char) {
   const regex = /^[a-zA-Z0-9]$/;
   return regex.test(char);
@@ -21,6 +28,6 @@ function validPalindrome(s) {
   }
   return true;
 }
-// Test
+
 let s = "Was it a car or a cat I saw?";
 console.log(validPalindrome(s)); // Output: true
