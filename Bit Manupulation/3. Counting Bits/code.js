@@ -8,6 +8,7 @@ function contingBits(n) {
     }
     dp[i] = 1 + dp[i - offset];
   }
+
   return dp;
 }
 let n = 5;
